@@ -51,6 +51,10 @@ namespace Appointment_Scheduler
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapControllerRoute(
+                name: "schedule",
+                pattern: "{controller=Schedule}/{action=Index}/{id?}");
+
             app.Run();
         }
     }

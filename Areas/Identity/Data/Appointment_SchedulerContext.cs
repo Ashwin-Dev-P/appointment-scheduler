@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Appointment_Scheduler.Models;
 
 namespace Appointment_Scheduler.Data;
 
@@ -19,4 +20,6 @@ public class Appointment_SchedulerContext : IdentityDbContext<Appointment_Schedu
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public DbSet<Appointment_Scheduler.Models.Schedule>? Schedule { get; set; }
 }
